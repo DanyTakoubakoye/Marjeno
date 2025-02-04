@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.marjeno">
+
+    <!-- Configuration des permissions si nécessaire -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="My App"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/LaunchTheme">
+
+        <!-- Activité principale (FlutterActivity) -->
+        <activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout|density|layoutDirection"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            
+            <!-- Pour définir un thème normal après le démarrage -->
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
